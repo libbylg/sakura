@@ -14,3 +14,7 @@ https://chocolatey.org/install#install-with-cmdexe
 SonarQube で使用するアクセストークンを暗号化するために使用する
 
 https://www.appveyor.com/docs/build-configuration/#secure-variables
+
+## SonarScanner の使用方法
+
+https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild#AnalyzingwithSonarQubeScannerforMSBuild-Usage
