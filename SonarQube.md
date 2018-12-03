@@ -40,6 +40,18 @@ Appveyor のプロジェクトで Settings の Environment にアクセスして
 2. build-wrapper-win-x86-64.exe を使って msbuild.exe を起動する。
 3. `C:\ProgramData\chocolatey\bin\SonarScanner.MSBuild.exe end` を呼ぶ。
 
+## SonarQube をローカルでビルドする方法
+
+SONAR_QUBE_TOKEN の値は SonarQube のサイトでログインして確認できます。
+
+```
+set SONAR_QUBE=Yes
+set SONAR_QUBE_ORG=sakura-editor
+set SONAR_QUBE_PROJECT=sakura-editor_sakura
+set SONAR_QUBE_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+build-sln.bat Win32 Release
+```
+
 ## SonarQube に関する情報
 
 ### SonarQube の使用方法に関するサイト
