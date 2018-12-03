@@ -8,9 +8,10 @@ https://sonarcloud.io/sessions/new にアクセスして GitHub アカウント�
 
 https://sonarcloud.io/projects/create にアクセスしてプロジェクトを作成します。
 
-Organization 名をメモしておきます。
-Project 名をメモしておきます。
-Access Token をメモしておきます。** この情報はパスワードと同じ意味を持つので漏れないように注意します。**
+- Organization 名をメモしておきます。
+- Project 名をメモしておきます。
+- Access Token をメモしておきます。 
+**この情報はパスワードと同じ意味を持つので漏れないように注意します。**
 
 ## Appveyor の設定
 
@@ -21,6 +22,8 @@ Appveyor のプロジェクトで Settings の Environment にアクセスして
 |SONAR_QUBE_ORG|Sonar Qube のOrganization 識別子||
 |SONAR_QUBE_PROJECT|Sonar Qube のプロジェクト識別子||
 |SONAR_QUBE_TOKEN|Sonar Qube のアクセスキー (API キー)|追加するとき右の鍵マークを押して秘密の環境変数に設定します|
+
+![環境変数の設定画面](appveyor-SonarQube.png)
 
 ## SonarQube に関する情報
 
