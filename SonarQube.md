@@ -25,6 +25,21 @@ Appveyor のプロジェクトで Settings の Environment にアクセスして
 
 ![環境変数の設定画面](appveyor-SonarQube.png)
 
+## SonarQube の使用方法
+
+### 準備
+
+1. https://chocolatey.org/install#install-with-cmdexe を参考に chocolatey をインストールする。(appveyor 上では不要)
+2. `choco install "msbuild-sonarqube-runner" -y` を使用して必要なファイルをインストールする。
+3. https://sonarcloud.io/static/cpp/build-wrapper-win-x86.zip をダウンロードする。
+4. build-wrapper-win-x86.zip を解凍する。
+
+### 解析手順
+
+1. `C:\ProgramData\chocolatey\bin\SonarScanner.MSBuild.exe begin` を呼ぶ。
+2. build-wrapper-win-x86-64.exe を使って msbuild.exe を起動する。
+3. `C:\ProgramData\chocolatey\bin\SonarScanner.MSBuild.exe end` を呼ぶ。
+
 ## SonarQube に関する情報
 
 ### SonarQube の使用方法に関するサイト
