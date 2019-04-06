@@ -73,7 +73,7 @@ jobs:
   condition: eq(variables['Build.Reason'], 'Schedule')
 
   steps:
-  - template: ci/azure-pipelines/template-sonarqube.yml
+  - template: ci/azure-pipelines/template-build-sonarqube.yml
 
 - job: cppcheck
   displayName: 'Windows cppcheck'
