@@ -39,6 +39,10 @@ jobs:
         BuildPlatform: 'x64'
         Configuration: 'Release'
 
+  # set condition    at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/process/conditions?view=azure-devops&viewFallbackFrom=vsts&tabs=yaml
+  # see Build.Reason at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml
+  condition: ne(variables['Build.Reason'], 'Schedule')
+
   steps:
   - template: ci/azure-pipelines/template-build-unittest.yml
 
@@ -90,6 +94,10 @@ jobs:
         BuildPlatform: 'x64'
         Configuration: 'Release'
 
+  # set condition    at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/process/conditions?view=azure-devops&viewFallbackFrom=vsts&tabs=yaml
+  # see Build.Reason at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml
+  condition: ne(variables['Build.Reason'], 'Schedule')
+
   steps:
   - template: ci/azure-pipelines/template-cppcheck.yml
 
@@ -108,6 +116,10 @@ jobs:
         BuildPlatform: 'x64'
         Configuration: 'Release'
 
+  # set condition    at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/process/conditions?view=azure-devops&viewFallbackFrom=vsts&tabs=yaml
+  # see Build.Reason at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml
+  condition: ne(variables['Build.Reason'], 'Schedule')
+
   steps:
   - template: ci/azure-pipelines/template-doxygen.yml
 
@@ -115,6 +127,10 @@ jobs:
   displayName: 'Windows checkEncoding'
   pool:
     vmImage: 'VS2017-Win2016'
+
+  # set condition    at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/process/conditions?view=azure-devops&viewFallbackFrom=vsts&tabs=yaml
+  # see Build.Reason at https://docs.microsoft.com/ja-jp/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml
+  condition: ne(variables['Build.Reason'], 'Schedule')
 
   steps:
   - template: ci/azure-pipelines/template-checkEncoding.yml
